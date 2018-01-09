@@ -8,11 +8,16 @@ REDIS_URL=redis://127.0.0.1:6379/5
 DATABASE_URL=sqlite:///test.db
 SECRET_KEY=xxoo
 将相应的配置都加入其中
-2. 测试环境中使用
-python mange.py
 
-3. 单元测试使用 pytest
-4. 运营后台考虑使用flask admin
+2. 整合数据库
+  1. export FLASK_APP=manage.py
+  2. flask db init
+  3. flask db migrate
+4. 测试环境执行
+  flask run
+
+4. 单元测试使用 pytest
+5. 运营后台考虑使用flask admin
 
 ### todo
 1. 用户登录

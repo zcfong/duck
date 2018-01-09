@@ -7,3 +7,4 @@ unipath
 flask-admin
 flask_sqlalchemy
 pytest
+flask_migrate
