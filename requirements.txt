@@ -6,3 +6,4 @@ python-decouple
 unipath
 flask-admin
 flask_sqlalchemy
+pytest
