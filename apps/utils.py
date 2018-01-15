@@ -18,11 +18,11 @@ def validate_argments(schema, argments):
         return validated_error(422, key)
 
 
-def verify_argments(required, argments):
+def verify_argments(requires, argments):
     if isinstance(argments, (dict,)):
         argments = [argments]
 
-    for filed in required:
+    for filed in requires:
         for args in argments:
             if filed not in args:
                 return validated_error(422, filed)

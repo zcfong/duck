@@ -13,9 +13,9 @@ def required_validate(schema):
             payload_data = request.json
             if not payload_data:
                 return bad_request()
-            required = schema.get('required', None)
+            requires = schema.get('requires', None)
 
-            verify = verify_argments(required, payload_data)
+            verify = verify_argments(requires, payload_data)
             if verify:
                 return verify
 

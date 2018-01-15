@@ -1,3 +1,5 @@
+import json
+
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -21,3 +23,8 @@ class SysUser(db.Model):
 
     def verify_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    def to_json(self):
+        return {'id': self.id, 'name': self.name,
+                'is_active': self.is_active,
+                'email': self.email}
